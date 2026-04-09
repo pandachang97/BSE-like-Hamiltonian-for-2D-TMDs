@@ -263,14 +263,7 @@ This code is useful for:
 - resolving `K+` and `K−` contributions to absorption
 - testing the effect of screening, broadening, truncation radius, and polarization on the optical spectrum
 
-## Limitations
 
-At its current stage, this repository is best viewed as a **compact research workflow / prototype** rather than a full production package. In particular:
-
-- the model is restricted to a two-band Dirac-like Hamiltonian
-- SOC is handled in the notebook driver through extracted valley gaps, not as a fully explicit multi-band spinful Hamiltonian
-- the BSE Hamiltonian is a simplified valley-resolved model rather than a full ab initio BSE solver
-- there is not yet a standalone command-line driver for the complete workflow, although `QE_xml_read.py` does provide a small CLI for inspecting the XML truncation step. fileciteturn0file0
 
 ## Citation / acknowledgement
 
