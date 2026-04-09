@@ -1,7 +1,6 @@
 # Two-Valley Dirac + BSE Optical Model from Quantum ESPRESSO XML
 
-This repository provides a small workflow for building a **valley-truncated two-band Dirac-like model** from a Quantum ESPRESSO `data-file-schema.xml`, constructing a **two-valley BSE-like excitonic Hamiltonian**, and computing the **imaginary part of the dielectric function** for circular polarization. The current code reads the QE k-grid, lattice information, and valley-edge band information from XML; builds a reduced k·p model around **K** or **K′**; applies a screened Coulomb kernel; and outputs valley-resolved and total absorption spectra. fileciteturn0file0 fileciteturn0file1 fileciteturn0file3 fileciteturn0file4
-
+This repository provides a small workflow for building a **valley-truncated two-band Dirac-like model** from a Quantum ESPRESSO `data-file-schema.xml`, constructing a **two-valley BSE-like excitonic Hamiltonian**, and computing the **imaginary part of the dielectric function** for circular polarization. The current code reads the QE k-grid, lattice information, and valley-edge band information from XML; builds a reduced k·p model around **K** or **K′**; applies a screened Coulomb kernel; and outputs valley-resolved and total absorption spectra.
 ## What this code does
 
 The present workflow is:
@@ -12,25 +11,25 @@ The present workflow is:
    - truncate the full k-grid to a disk around **K** or **K′**
    - compute a 2D k-space quadrature weight
    - detect SOC automatically from XML flags or valley splittings
-   - extract valley-edge energies such as `Ev_top`, `Ev_low`, and `Ec_min` fileciteturn0file0
+   - extract valley-edge energies such as `Ev_top`, `Ev_low`, and `Ec_min`
 
 2. **Build the two-valley Dirac-like model**
    - construct a 2×2 Hamiltonian at each retained k-point
    - diagonalize the model independently for `K_plus` and `K_minus`
-   - store valley-dependent complex momenta `kx ± i ky` for later phase handling fileciteturn0file1
+   - store valley-dependent complex momenta `kx ± i ky` for later phase handling
 
 3. **Build the BSE-like Hamiltonian**
    - use the Dirac gaps on the diagonal
    - use a screened Coulomb/RPA-like kernel off diagonal
-   - include valley-dependent phase factors in the interaction matrix elements fileciteturn0file4
+   - include valley-dependent phase factors in the interaction matrix elements
 
 4. **Compute optical spectra**
    - diagonalize the BSE Hamiltonian for both valleys
    - compute circular-polarization oscillator strengths
    - broaden the discrete exciton spectrum into `Im ε(ω)`
-   - return both **total** and **valley-resolved** spectra fileciteturn0file3
+   - return both **total** and **valley-resolved** spectra 
 
-A sample one-cell notebook driver is included in `Dirac_like_Hamiltonian_honeycomb_lattice.ipynb`, and the main runtime options are stored in `parameters.json`. fileciteturn0file2
+A sample one-cell notebook driver is included in `Dirac_like_Hamiltonian_honeycomb_lattice.ipynb`, and the main runtime options are stored in `parameters.json`. 
 
 ## Repository structure
 
@@ -47,19 +46,19 @@ A sample one-cell notebook driver is included in `Dirac_like_Hamiltonian_honeyco
 ### File roles
 
 - `QE_xml_read.py`  
-  Utilities for reading `data-file-schema.xml`, extracting k-points, reciprocal vectors, valley-centered truncation, k-space weights, and SOC-related valley splittings. fileciteturn0file0
+  Utilities for reading `data-file-schema.xml`, extracting k-points, reciprocal vectors, valley-centered truncation, k-space weights, and SOC-related valley splittings. 
 
 - `K_P_dirac.py`  
-  Builds and diagonalizes the two-band Dirac-like Hamiltonian for the `K_plus` and `K_minus` valleys. fileciteturn0file1
+  Builds and diagonalizes the two-band Dirac-like Hamiltonian for the `K_plus` and `K_minus` valleys.
 
 - `BSE_hamiltonian.py`  
-  Builds the two-valley BSE-like Hamiltonian using the Dirac eigenvalue gaps and a screened Coulomb kernel. fileciteturn0file4
+  Builds the two-valley BSE-like Hamiltonian using the Dirac eigenvalue gaps and a screened Coulomb kernel. 
 
 - `dielectric_function.py`  
-  Diagonalizes the BSE matrices, computes circular oscillator strengths, and generates the broadened dielectric spectrum. fileciteturn0file3
+  Diagonalizes the BSE matrices, computes circular oscillator strengths, and generates the broadened dielectric spectrum. 
 
 - `parameters.json`  
-  User-editable runtime settings for the QE XML path, k-space weight, SOC mode, Dirac-model parameters, Coulomb-kernel settings, and optical broadening/grid parameters. fileciteturn0file2
+  User-editable runtime settings for the QE XML path, k-space weight, SOC mode, Dirac-model parameters, Coulomb-kernel settings, and optical broadening/grid parameters. 
 
 - `Dirac_like_Hamiltonian_honeycomb_lattice.ipynb`  
   Example notebook driver that loads `parameters.json`, auto-detects SOC, runs the model, and plots the spectra.
@@ -73,8 +72,7 @@ Minimal Python requirements:
 - `matplotlib`
 - Jupyter Notebook or JupyterLab for the example notebook
 
-The code also uses standard-library modules such as `json`, `argparse`, `pathlib`, `dataclasses`, and `xml.etree.ElementTree`. fileciteturn0file0 fileciteturn0file1
-
+The code also uses standard-library modules such as `json`, `argparse`, `pathlib`, `dataclasses`, and `xml.etree.ElementTree`. 
 Install the main dependencies with:
 
 ```bash
