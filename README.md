@@ -5,7 +5,22 @@
 > [!IMPORTANT]
 > Please use the code in the `Dirac_like_Hamiltonian_SOC_from_QE-read_input/` folder first. This folder contains the recommended example workflow for new users.
 ## Benchmark absorption spectrum in 2D MoS2
-![Overall absorption spectrum](image/output4.png)
+<table align="center">
+  <tr>
+    <td align="center" width="33%">
+      <img src="image/output4.png" alt="Figure 1" width="100%"><br>
+      <sub>Overall absorption spectrum of 2D MoS_{2} from PBE functional in QE</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="image/output5.png" alt="Figure 2" width="100%"><br>
+      <sub>Dirac/BSE model</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="fimage/output6.png" alt="Figure 3" width="100%"><br>
+      <sub>Example absorption spectrum</sub>
+    </td>
+  </tr>
+</table>
 
 
 This repository provides a compact workflow for building a **valley-truncated two-band Dirac-like model** from a Quantum ESPRESSO `data-file-schema.xml`, constructing a **two-valley BSE-like excitonic Hamiltonian**, and computing the **imaginary part of the dielectric function** for circular polarization. The current code reads the QE k-grid, lattice information, and valley-edge band information from XML; builds a reduced k·p model around **K** or **K'**; applies a screened Coulomb kernel; and outputs both **valley-resolved** and **total** absorption spectra.
