@@ -15,7 +15,7 @@ So the recommended language is:
 - **K/K' valleys** for valley index
 - **A/B excitons** or **A/B peaks** for optical features
 
-and not “A valley” or “B valley.”
+
 
 ## What this code does
 
