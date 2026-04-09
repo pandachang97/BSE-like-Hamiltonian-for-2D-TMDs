@@ -1,0 +1,34 @@
+{
+  "qe": {
+    "xml_path": "data-file-schema.xml",
+    "k_weight": { "source": "xml", "value": null },
+    "soc": { "mode": "auto", "split_tol_ev": 0.001, "valley_for_gap": "K" }
+  },
+  "kp_model": {
+    "t_eV": 1.6,
+    "alpha": 0.1,
+    "Ev_eV": 0.0,
+    "Ec_eV": null,
+    "a_override_A": null,
+    "valley_center": "K"
+  },
+  "bse": {
+    "kernel": {
+      "chi_value": 6.6,
+      "chi_units": "A",
+      "chi_is_inverse": false,
+      "k_units": "A^-1",
+      "k_eps": 1e-12
+    }
+  },
+  "optics": {
+    "polarization": "left",
+    "eta_eV": 0.05,
+    "omega_min_eV": 1.0,
+    "omega_max_eV": 3.0,
+    "omega_points": 1200,
+    "prefactor": 1.0,
+    "include_frequency_factor": true,
+    "broadening": "gaussian"
+  }
+}
