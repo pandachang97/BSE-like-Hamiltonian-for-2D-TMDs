@@ -16,7 +16,7 @@
       <sub>Dirac/BSE model</sub>
     </td>
     <td align="center" width="33%">
-      <img src="fimage/output6.png" alt="Figure 3" width="100%"><br>
+      <img src="image/output6.png" alt="Figure 3" width="100%"><br>
       <sub>Example absorption spectrum</sub>
     </td>
   </tr>
