@@ -13,11 +13,11 @@
     </td>
     <td align="center" width="33%">
       <img src="image/output5.png" alt="Figure 2" width="100%"><br>
-      <sub>Dirac/BSE model</sub>
+      <sub>Dirac/The A peak decompostion at K/K' valley</sub>
     </td>
     <td align="center" width="33%">
       <img src="image/output6.png" alt="Figure 3" width="100%"><br>
-      <sub>Example absorption spectrum</sub>
+      <sub>The B peak decompostion at K/K' valley</sub>
     </td>
   </tr>
 </table>
