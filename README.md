@@ -9,7 +9,7 @@
   <tr>
     <td align="center" width="33%">
       <img src="image/output4.png" alt="Figure 1" width="100%"><br>
-      <sub>Overall absorption spectrum of 2D MoS_{2} from PBE functional in QE</sub>
+      <sub>Overall absorption spectrum of 2D MoS$_{2}$ from PBE functional in QE</sub>
     </td>
     <td align="center" width="33%">
       <img src="image/output5.png" alt="Figure 2" width="100%"><br>
