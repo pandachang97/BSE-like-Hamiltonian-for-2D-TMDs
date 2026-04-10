@@ -4,12 +4,12 @@
 
 > [!IMPORTANT]
 > Please use the code in the `Dirac_like_Hamiltonian_SOC_from_QE-read_input/` folder first. This folder contains the recommended example workflow for new users.
-## Benchmark absorption spectrum in 2D MoS2
+## Benchmark absorption spectrum in 2D MoS<sub>2</sub>
 <table align="center">
   <tr>
     <td align="center" width="33%">
       <img src="image/output4.png" alt="Figure 1" width="100%"><br>
-      <sub>Overall absorption spectrum of 2D MoS$_{2}$ from PBE functional in QE</sub>
+      <sub>Overall absorption spectrum of 2D MoS<sub>2</sub> from PBE functional in QE</sub>
     </td>
     <td align="center" width="33%">
       <img src="image/output5.png" alt="Figure 2" width="100%"><br>
